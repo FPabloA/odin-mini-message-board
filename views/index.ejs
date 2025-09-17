@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <title> <%= title %> </title>
+        <link rel="stylesheet" href="/styles.css">
+    </head>
+
+    <body>
+        <% for(let i= 0; i < messages.length; i++) { %>
+            <div class="message-wrapper">
+                <div class="message-user"> <%= messages[i].user %> </div>
+                <div class="message-text"> <%= messages[i].text %> </div>
+                <div class="message-date"> <%= messages[i].added %> </div>
+            </div>
+        <% } %>
+        <a href="/new">Write a new Message</a>
+    </body>
+</html>
